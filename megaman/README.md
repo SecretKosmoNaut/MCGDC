@@ -4,7 +4,7 @@ If anyone is interested in programming and likes solving problems from scratch u
 
 The side scroller won't strictly be Mega Man per se, I am mainly using sprites that already exist so that I can focus on the programming concepts without being distracted by other areas of game design. Elements from Mario, Metroid etc can and will be added as programming challenges using whatever sprites as place holders.
 
-![Alt text](/preview/1.3.17.2:20.gif?raw=true "Walking Stage Completed")
+![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/1.3.17.2%3A20.gif)
 
 Requirement(s):
 PyGame - https://www.pygame.org/wiki/GettingStarted
