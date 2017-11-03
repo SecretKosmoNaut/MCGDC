@@ -9,3 +9,10 @@ PyGame - https://www.pygame.org/wiki/GettingStarted
 
 To Run:
 python megaman.py
+
+To-Do:
+* Re-Structure animation module
+* Add jumping module
+* Fix multi-jump bug
+* Add platform
+* Add collision module/implementation
