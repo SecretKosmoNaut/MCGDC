@@ -1,5 +1,6 @@
 import pygame
 import time
+from timer import Timer
 
 class Megaman():
 
@@ -17,13 +18,13 @@ class Megaman():
 
         # Movement flag and attributes.
         self.speed = .003
+        self.timer = Timer()
         self.moving_right = False
         self.moving_left = False
 
     def update(self):
         """Update the player animation and positon based on flags."""
         if self.moving_right:
-            self.anim_start = int(time.time())
             self.rect.centerx += 1
             time.sleep(self.speed)
         elif self.moving_left:
