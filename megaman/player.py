@@ -21,6 +21,7 @@ class Megaman():
         self.timer = Timer()
         self.moving_right = False
         self.moving_left = False
+        self.facing_left = False
 
     def update(self):
         """Update the player animation and positon based on flags."""
