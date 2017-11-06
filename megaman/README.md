@@ -21,7 +21,7 @@ distracted by other areas of game design. Elements from Mario, Metroid etc can
 and will be added as programming challenges using whatever sprites as place
 holders.
 
-![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/1.3.17.2%3A20.gif)
+![Alt text](https://github.com/SecretKosmoNaut/MCGDC/blob/master/megaman/preview/11.3.17.2:20.gif)
 
   11.5.17 - Add Jumping Functionality [WIP]
 
@@ -45,6 +45,10 @@ maximum moment the player will be able to generate running to show how the
 function works.
 
 ![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/jumping_function.png)
+
+  11.6.17 - Jumping [WIP]
+
+  ![Alt text](https://github.com/SecretKosmoNaut/MCGDC/blob/master/megaman/preview/11.6.17.gif)
 
   Requirement(s):
 * PyGame - https://www.pygame.org/wiki/GettingStarted
