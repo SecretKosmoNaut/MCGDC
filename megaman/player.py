@@ -34,9 +34,6 @@ class Megaman():
             time.sleep(self.speed)
         elif self.jumping:
             self.action.jump(self.rect.bottomleft)
-            self.jumping = False
-
-
 
     def blitme(self):
         """Draws Mega Man at his current location."""
