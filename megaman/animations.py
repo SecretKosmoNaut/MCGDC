@@ -3,7 +3,7 @@ import pygame
 def animate(player):
         walking_frames = 4
         current_frame = player.timer.elapsed_time
-        
+
         if not player.moving_right and not player.moving_left:
             player.image = pygame.image.load('images/megaman/stand.png')
 
@@ -36,6 +36,9 @@ def animate(player):
                 player.image = pygame.image.load('images/megaman/walk2.png')
             else:
                 player.image = pygame.image.load('images/megaman/walk1.png')
+
+        if player.jumping:
+            player.image = pygame.image.load('images/megaman/jump.png')
 
         if player.facing_left:
             player.image = pygame.transform.flip(player.image, True, False)
