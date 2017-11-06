@@ -46,7 +46,8 @@ function works.
 ![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/jumping_function.png)
 
   Requirement(s):
-PyGame - https://www.pygame.org/wiki/GettingStarted
+* PyGame - https://www.pygame.org/wiki/GettingStarted
+
 
   To Run:
 * python megaman.py
