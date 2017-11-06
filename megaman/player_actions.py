@@ -18,9 +18,17 @@ class Actions():
         self.b = 0
         self.c = 0
         self.i = 0
-        self.end_coordinates = 0
+        self.end_coordinates = []
         self.jump_init = False
-        self.apex = False
+
+    def reset(self):
+        self.a = 0
+        self.b = 0
+        self.c = 0
+        self.i = 0
+        self.end_coordinates = []
+        self.jump_init = False
+        self.player.jumping = False
 
     def jump(self, initial_coordinates):
         """Basic jumping function. Takes in a tuple with (x,y) coordinates."""
@@ -42,21 +50,29 @@ class Actions():
             self.b = 64
             self.c = initial_coordinates[0]
 
-            self.end_coordinates = [int(self.a*(self.b*2)),initial_coordinates[1]]
+            for coord_val in initial_coordinates:
+                self.end_coordinates.append(coord_val)
+
+            old_x = self.end_coordinates[0]
+            new_x = old_x+self.b*2
+
+            self.end_coordinates[0] = new_x
 
         if current_coordinates != self.end_coordinates:
             x = current_coordinates[0]
-            y = current_coordinates[1]
+            y = self.end_coordinates[1]
+
             x += 4
-            i = math.trunc(-1/self.b*self.a**2*(x-(self.b*self.a+self.c))**2+self.b)
-
-            if self.i == self.b:
-                self.apex = True
-                self.i = 0
-
-            if self.apex == True:
-                self.i -= self.i*2
+            self.i = math.trunc(-1/self.b*self.a**2*(x-(self.b*self.a+self.c))**2+self.b)
 
             y -= self.i
 
             self.player.rect.bottomleft = (x,y)
+            print("   Goal - X:%i\tY:%i" % (self.end_coordinates[0], self.end_coordinates[1]))
+            print("Current - X:%i\tY:%i" % self.player.rect.bottomleft)
+            print(self.i)
+            print()
+            time.sleep(self.player.speed)
+        else:
+            print("Done!")
+            self.reset()

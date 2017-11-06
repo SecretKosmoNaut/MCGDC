@@ -33,6 +33,8 @@ class Megaman():
             self.rect.centerx -= 1
             time.sleep(self.speed)
         elif self.jumping:
+            print("Sending to jump: ")
+            print(self.rect.bottomleft)
             self.action.jump(self.rect.bottomleft)
 
     def blitme(self):

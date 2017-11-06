@@ -16,7 +16,6 @@ def check_events(player):
                 player.moving_left = True
             elif event.key == pygame.K_UP:
                 player.jumping = True
-                player.jump_start_pos = player.rect.bottomleft
 
         elif event.type == pygame.KEYUP:
             player.timer.reset()
@@ -24,9 +23,6 @@ def check_events(player):
                 player.moving_right = False
             elif event.key == pygame.K_LEFT:
                 player.moving_left = False
-            elif event.key == pygame.K_UP:
-                player.jumping = False
-
 
 def update_screen(screen, settings, *actors):
     screen.fill(settings.bg_color)
