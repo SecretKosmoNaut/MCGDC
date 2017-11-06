@@ -6,6 +6,11 @@ The side scroller won't strictly be Mega Man per se, I am mainly using sprites t
 
 ![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/1.3.17.2%3A20.gif)
 
+11.5.17 - Add Jumping Functionality WIP
+Started working on the basic function that will be used for the jumping function in the game. It originally started as a hardcoded equation that didn't take into account the possibility of implementing momentum but I figured out a pattern that yields an equation with an x-intercept centered at the origin allowing us to use it. Below is an image showing the parabolas differing momentum percentages and its effect on jumping.
+
+![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/jumping_function.png)
+
 Requirement(s):
 PyGame - https://www.pygame.org/wiki/GettingStarted
 
@@ -13,8 +18,8 @@ To Run:
 python megaman.py
 
 To-Do:
+* Add jumping module [WIP]
 * Re-Structure animation module
-* Add jumping module
 * Fix multi-jump bug
 * Add platform
 * Add collision module/implementation
