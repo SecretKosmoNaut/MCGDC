@@ -22,6 +22,7 @@ class Megaman():
         self.moving_right = False
         self.moving_left = False
         self.jumping = False
+        self.jump_start_pos = 0.0
         self.facing_left = False
 
     def update(self):
@@ -34,14 +35,14 @@ class Megaman():
             time.sleep(self.speed)
         elif self.jumping:
             # Basic Jumping Equation:
-            # f(x)=-1/ba^2(x-[(b*a)+x])^2+b
-            # a = momentum
-            # b = maximum height
-            # b * 2 = maximum distance
-            # x = current x-position
-
-            x_int1 = self.rect.centerx
-            x_int2 = 0
+            # f(x)=-1/ba^2(x-[b*a + c])^2+b
+            # * a = momentum percent
+            # * b = maximum height
+            # * b * 2 = maximum distance
+            # * c = starting x-position
+            # * x = current x-position
+            
+            print("Y:%i" % self.rect.centery)
 
     def blitme(self):
         """Draws Mega Man at his current location."""

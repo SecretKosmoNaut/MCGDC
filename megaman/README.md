@@ -25,11 +25,12 @@ holders.
 
   11.5.17 - Add Jumping Functionality [WIP]
 
-    f(x)=-1/ba^2(x-[(b*a)+x])^2+b
+    f(x)=-1/ba^2(x-[b*a + c])^2+b
 
 * a = momentum percent
 * b = maximum height
 * b * 2 = maximum distance
+* c = starting x-position
 * x = current x-position
 
   Started working on the game's jumping physics. It originally started as an

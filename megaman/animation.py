@@ -3,8 +3,7 @@ import pygame
 def animate(player):
         walking_frames = 4
         current_frame = player.timer.elapsed_time
-        print(current_frame)
-
+        
         if not player.moving_right and not player.moving_left:
             player.image = pygame.image.load('images/megaman/stand.png')
 
