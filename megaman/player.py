@@ -34,7 +34,7 @@ class Megaman():
             time.sleep(self.speed)
         elif self.jumping:
             # Basic Jumping Equation:
-            # y = -1/a^2(x-((b*a)+x))^2+b
+            # f(x)=-1/ba^2(x-[(b*a)+x])^2+b
             # a = momentum
             # b = maximum height
             # b * 2 = maximum distance

@@ -1,13 +1,47 @@
-Hello everyone, my name is Alex and I've been setting up an unofficial repository for a side project that I've been working on yesterday related to Monday's club meeting. It's regarding a Python based game that is made from scratch (less PyGame for image processing). We talked about making a side scroller game, such as Super Mario Bros. clone and a chess board game as ideas. I've gone ahead and started the side scroller, but have used Mega Man as the player character instead of Mario for the proof of concept.
+Hello everyone, my name is Alex and I've been setting up an unofficial
+repository for a side project that I've been working on yesterday related to
+Monday's club meeting. It's regarding a Python based game that is made from
+scratch (less PyGame for image processing). We talked about making a side
+scroller game, such as Super Mario Bros. clone and a chess board game as ideas.
+I've gone ahead and started the side scroller, but have used Mega Man as the
+player character instead of Mario for the proof of concept.
 
-If anyone is interested in programming and likes solving problems from scratch using the concepts we've learned in class, feel free to join me as I continue to work on the side scroller and possibly start working on the chess game as well. The framework/library/module, PyGame, is discussed in our CSC Intro Programming textbook and will be covered during the course. This project will help you gain additional practice outside of class if you need it and I am more than happy to answer any of your questions as they relate to the project. Working on this project will help you with Assignment: Program 03 and your Final.
+If anyone is interested in programming and likes solving problems from scratch
+using the concepts we've learned in class, feel free to join me as I continue to
+work on the side scroller and possibly start working on the chess game as well.
+The framework/library/module, PyGame, is discussed in our CSC Intro Programming
+textbook and will be covered during the course. This project will help you gain
+additional practice outside of class if you need it and I am more than happy to
+answer any of your questions as they relate to the project. Working on this
+project will help you with Assignment: Program 03 and your Final.
 
-The side scroller won't strictly be Mega Man per se, I am mainly using sprites that already exist so that I can focus on the programming concepts without being distracted by other areas of game design. Elements from Mario, Metroid etc can and will be added as programming challenges using whatever sprites as place holders.
+The side scroller won't strictly be Mega Man per se, I am mainly using sprites
+that already exist so that I can focus on the programming concepts without being
+distracted by other areas of game design. Elements from Mario, Metroid etc can
+and will be added as programming challenges using whatever sprites as place
+holders.
 
 ![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/1.3.17.2%3A20.gif)
 
 11.5.17 - Add Jumping Functionality WIP
-Started working on the basic function that will be used for the jumping function in the game. It originally started as a hardcoded equation that didn't take into account the possibility of implementing momentum but I figured out a pattern that yields an equation with an x-intercept centered at the origin allowing us to use it. Below is an image showing the parabolas differing momentum percentages and its effect on jumping.
+
+f(x)=-1/ba^2(x-[(b*a)+x])^2+b
+
+a = momentum percent
+b = maximum height
+b * 2 = maximum distance
+x = current x-position
+
+Started working on the game's jumping physics. It originally started as an
+equation with hard-coded variables that couldn't take into account the
+possibility of implementing momentum but I figured out a pattern that yields
+an equation that works. This equation yields one x-intercept centered at the
+origin (0,0) and can be offset by the player's x-position within the game making
+it perfect for use in games. The sprite currently used is 32x32 pixels, so I set
+the jump height to 64px and the maximum jump distance to 128px (dependent on
+momentum). Below are four parabolas set at 100%, 75%, 50% and 25% of the
+maximum moment the player will be able to generate running to show how the
+function works.
 
 ![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/jumping_function.png)
 
