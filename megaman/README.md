@@ -23,9 +23,9 @@ holders.
 
 ![Alt text](https://raw.githubusercontent.com/SecretKosmoNaut/MCGDC/master/megaman/preview/1.3.17.2%3A20.gif)
 
-      11.5.17 - Add Jumping Functionality [WIP]
+  11.5.17 - Add Jumping Functionality [WIP]
 
-f(x)=-1/ba^2(x-[(b*a)+x])^2+b
+    f(x)=-1/ba^2(x-[(b*a)+x])^2+b
 
 * a = momentum percent
 * b = maximum height
@@ -49,7 +49,7 @@ function works.
 PyGame - https://www.pygame.org/wiki/GettingStarted
 
   To Run:
-python megaman.py
+* python megaman.py
 
   To-Do:
 * Add jumping module [WIP]
