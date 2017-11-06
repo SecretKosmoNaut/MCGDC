@@ -16,7 +16,7 @@ def check_events(player):
                 player.moving_left = True
             elif event.key == pygame.K_UP:
                 player.jumping = True
-                player.jump_start_pos = player.rect.centerx
+                player.jump_start_pos = player.rect.bottomleft
 
         elif event.type == pygame.KEYUP:
             player.timer.reset()

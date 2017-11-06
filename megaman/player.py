@@ -1,6 +1,7 @@
 import pygame
 import time
 from timer import Timer
+from player_actions import Actions
 
 class Megaman():
 
@@ -9,21 +10,19 @@ class Megaman():
 
         self.screen = screen
         self.image = pygame.image.load('images/megaman/stand.png')
+        self.timer = Timer()
+        self.action = Actions(self)
         self.rect = self.image.get_rect()
         self.screen_rect = self.screen.get_rect()
-
-        # Start Mega Man on the left-bottom side of the screen.
         self.rect.left = self.screen_rect.left
         self.rect.bottom = self.screen_rect.bottom
 
-        # Movement flag and attributes.
+        # Movement flags and attributes.
         self.speed = .003
-        self.timer = Timer()
         self.moving_right = False
         self.moving_left = False
-        self.jumping = False
-        self.jump_start_pos = 0.0
         self.facing_left = False
+        self.jumping = False
 
     def update(self):
         """Update the player animation and positon based on flags."""
@@ -34,15 +33,10 @@ class Megaman():
             self.rect.centerx -= 1
             time.sleep(self.speed)
         elif self.jumping:
-            # Basic Jumping Equation:
-            # f(x)=-1/ba^2(x-[b*a+c])^2+b
-            # * a = momentum percent
-            # * b = maximum height
-            # * b * 2 = maximum distance
-            # * c = starting x-position
-            # * x = current x-position
+            self.action.jump(self.rect.bottomleft)
+            self.jumping = False
 
-            print("Y:%i" % self.rect.centery)
+
 
     def blitme(self):
         """Draws Mega Man at his current location."""

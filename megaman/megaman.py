@@ -2,7 +2,7 @@ import sys
 import pygame
 import time
 import game_functions as gf
-from animation import animate
+from animations import animate
 from settings import Settings
 from player import Megaman
 
