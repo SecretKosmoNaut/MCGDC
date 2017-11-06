@@ -25,7 +25,7 @@ holders.
 
   11.5.17 - Add Jumping Functionality [WIP]
 
-    f(x)=-1/ba^2(x-[b*a + c])^2+b
+    f(x)=-1/ba^2(x-[b*a+c])^2+b
 
 * a = momentum percent
 * b = maximum height

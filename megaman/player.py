@@ -35,13 +35,13 @@ class Megaman():
             time.sleep(self.speed)
         elif self.jumping:
             # Basic Jumping Equation:
-            # f(x)=-1/ba^2(x-[b*a + c])^2+b
+            # f(x)=-1/ba^2(x-[b*a+c])^2+b
             # * a = momentum percent
             # * b = maximum height
             # * b * 2 = maximum distance
             # * c = starting x-position
             # * x = current x-position
-            
+
             print("Y:%i" % self.rect.centery)
 
     def blitme(self):
