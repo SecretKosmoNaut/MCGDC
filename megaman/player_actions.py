@@ -72,7 +72,7 @@ class Actions():
             print("Current - X:%i\tY:%i" % self.player.rect.bottomleft)
             print(self.i)
             print()
-            time.sleep(self.player.speed)
+            time.sleep(.01)
         else:
             print("Done!")
             self.reset()
