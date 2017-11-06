@@ -27,10 +27,10 @@ holders.
 
 f(x)=-1/ba^2(x-[(b*a)+x])^2+b
 
-a = momentum percent
-b = maximum height
-b * 2 = maximum distance
-x = current x-position
+* a = momentum percent
+* b = maximum height
+* b * 2 = maximum distance
+* x = current x-position
 
 Started working on the game's jumping physics. It originally started as an
 equation with hard-coded variables that couldn't take into account the
