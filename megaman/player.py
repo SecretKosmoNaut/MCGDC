@@ -32,10 +32,15 @@ class Megaman():
         elif self.moving_left:
             self.rect.centerx -= 1
             time.sleep(self.speed)
-        elif self.jumping:
-            print("Sending to jump: ")
-            print(self.rect.bottomleft)
+
+        if self.jumping and not self.action.jump_init:
+            print("Sending to jump: ")      # Debug
+            print(self.rect.bottomleft)     # Debug
+            print()                         # Debug
+
             self.action.jump(self.rect.bottomleft)
+        elif self.jumping and self.action.jump_init:
+            self.action.jump((0,0))
 
     def blitme(self):
         """Draws Mega Man at his current location."""
