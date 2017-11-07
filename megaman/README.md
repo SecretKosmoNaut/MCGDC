@@ -54,8 +54,9 @@ function works.
   11.7.17 - Jumping Fixes [WIP]
 
   Fixed:
-  * Directional changes mid-air causing player to fall through the floor
-  * Not being able to initiate a jump while running
+  * Directional changes mid-air causing player to halt jumping and glide in the air
+  * Directional changes mid-air causing player to fall through the floor upon "landing"
+  * Not being able to initiate a jump while running "gliding on the floor"
 
   ![Alt text](https://github.com/SecretKosmoNaut/MCGDC/blob/master/megaman/preview/11.7.17.gif)
 
